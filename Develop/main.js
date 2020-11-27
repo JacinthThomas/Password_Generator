@@ -54,7 +54,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 			const funcName = Object.keys(type)[0];
 			generatedPassword += randomFunc[funcName]();
 		});
-	// }e===]]]--w-s
+	}
 	
 	const finalPassword = generatedPassword.slice(0, length);
 	
@@ -93,7 +93,6 @@ floating_btn.addEventListener('click', () => {
 	social_panel_container.classList.toggle('visible')
 });
 
-// close_btn.addEventListener('click', () => {
-// 	social_panel_container.classList.remove('visible')
-// 
-}
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible')
+});

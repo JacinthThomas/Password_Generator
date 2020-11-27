@@ -138,9 +138,9 @@ function generatePassword(lower, upper, number, symbol, length) {
     return '';
   }
 
-  for(let i =0; i < length; i += typesCount) {
+  for(let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
-      const funcName = Object.keys(type)[0]
+      const funcName = Object.keys(type)[0];
       console.log('funcName: ', funcName)
 
       generatedPassword += randomFunc[funcName]();
@@ -156,15 +156,15 @@ function generatePassword(lower, upper, number, symbol, length) {
 
 // Generator funtions - http://www.net-comber.com/charset.html
 function getRandomLower(){
-  return String.fromCharCode(Math.floor(Math.random()*26)+97);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
 function getRandomUpper(){
-  return String.fromCharCode(Math.floor(Math.random()*26)+65);
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
 function getRandomNumber(){
-  return String.fromCharCode(Math.floor(Math.random()*10)+48);
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
 function getRandomSymbol(){
