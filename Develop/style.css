@@ -275,5 +275,5 @@ border-top: 5px solid black;
 
 #title1::before {
 	content: '';
-	bottom:-
+	bottom:'';
 }
