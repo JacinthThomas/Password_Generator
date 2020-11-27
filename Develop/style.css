@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-	background-color: #216f72;
+	background-color: #e6f14b;
 	color: #fff;
 	display: flex;
 	font-family: 'Muli', sans-serif;
@@ -17,24 +14,6 @@ body {
 	justify-content: center;
 	padding: 10px;
 	min-height: 100vh;
-}
-
-#canvas1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width:100%;
-  height:100%;
-}
-
-.border_1 {
-  transform: translate(0%, 0%);
-  white-space: nowrap;
-  border-top: 5px solid black;
-}
-
-.border_1::before {
-  content:'';
 }
 
 p {
@@ -51,7 +30,8 @@ input[type=checkbox] {
 }
 
 .container {
-	background-color: #23235B;
+	position: absolute;
+	background-color: #ebc20d;
 	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
 	padding: 20px;
 	width: 350px;
@@ -91,7 +71,7 @@ input[type=checkbox] {
 	cursor: pointer;
 	font-size: 16px;
 	padding: 8px 12px;
-	background-color: #3B3B98;
+	background-color: #0ac5b6;
 }
 
 .btn-large {
@@ -271,4 +251,29 @@ input[type=checkbox] {
 	.floating-btn {
 		right: 10px;
 	}
+}
+
+#canvas1 {
+	position: absolute;
+	background-position: 0px 0px;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: -1;
+}
+
+#title1 {
+top:10%;
+left: 50%;
+transform: translate (-50%, -50%);
+font-size: 120px;
+line-height: 110px;
+white-space:nowrap;
+border-top: 5px solid black;
+}
+
+#title1::before {
+	content: '';
+	bottom:-
 }
