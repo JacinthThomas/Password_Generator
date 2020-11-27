@@ -6,13 +6,13 @@ let particlesArray = [];
 const numberOfParticles = 300;
 
 // measure title element
-let titleElement = document.getElementById('title1');
+let titleElement = document.getElementById('border_1');
 let titleMeasurments = titleElement.getBoundingClientRect();
 let title = {
   x: titleMeasurments.left,
   y: titleMeasurments.top,
   width: titleMeasurments.width,
-  height: 10
+  height: 0
 }
 class Particle {
   constructor(x,y){
@@ -40,8 +40,8 @@ class Particle {
       this.y < title.y + title.height &&
       this.y + this.size > title.y
     )
-    this.y -=3;
-    this.weight *= 1.
+    this.y -=10;
+    this.weight *= 1.5;
   }
   
 
@@ -56,6 +56,7 @@ class Particle {
 
 
 function init(){
+  particlesArray = [];
   for (let i = 0; i < numberOfParticles; i++){
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
@@ -77,3 +78,16 @@ function animate(){
 }
 
 animate();
+
+
+window.addEventListener('resize', function(){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  titleMeasurments = titleElement.getBoundingClientRect();
+  title = {
+  x: titleMeasurments.left,
+  y: titleMeasurments.top,
+  width: titleMeasurments.width,
+  height: 0}
+  init()
+})
